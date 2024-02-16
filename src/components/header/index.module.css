@@ -1,0 +1,17 @@
+.headerBackground{
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.4542191876750701) 0%, rgba(0,212,255,1) 100%), url(../../images/mountain3.jpg);;
+    height: 40vh;
+    margin: 10px 10px 0 10px;
+    border-radius: 10px;
+   
+    background-position: center;
+
+}
+
+.headerH1 {
+    margin: 0 auto;
+    width: 60%;
+    padding-top: 30px;
+    color: white;
+    
+}
