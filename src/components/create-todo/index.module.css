@@ -13,3 +13,11 @@
     width: 100%;
     border: none;
 }
+
+.createTodoInput:focus {
+    outline: none;
+}
+
+.btn {
+    background-color: brown;
+}
