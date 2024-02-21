@@ -10,6 +10,8 @@ function TodoItem(props) {
             className="form-check-label" 
             for={props.myindex}
         >{props.mytodo}</label>
+        {/*Take Home assignment: Implement single delete */}
+        <button className="btn btn-danger">Delete</button>
     </li>
     );    
 }

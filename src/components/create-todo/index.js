@@ -6,16 +6,25 @@ function CreateTodo() {
     const [todos, setTodos] = useLocalStorage("TODO_KEY", []);
     const [todo, setTodo] = useState("");
 
+    const saveTodos = () => {
+        //Save all todos
+        setTodos([...todos, todo]);
+        //Wipe the input box
+        setTodo("");
+    }
+
     return (
         <section className={styles.createTodoSection}>
             <input
+                value={todo}
+                onKeyDown={event => event.key == "Enter" && saveTodos()}
                 onChange={event => setTodo(event.target.value)}
                 className={styles.createTodoInput}
                 placeholder="Start typing..." />
-            <button 
+            <button
                 className={`btn ${styles.btn}`}
-                onClick={() => setTodos([...todos, todo])}
-                >Create</button>
+                onClick={() => saveTodos()}
+            >Create</button>
         </section>
     );
 }
